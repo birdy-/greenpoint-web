@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import PropTypes from 'prop-types';
 
 import styles from './styles.scss';
 
@@ -35,5 +35,9 @@ const DashboardTable = ({ portfolio }) => (
     </table>
   </div>
 );
+
+DashboardTable.propTypes = {
+  portfolio: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default DashboardTable;

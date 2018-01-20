@@ -1,0 +1,35 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "globals": {
+    "fetch": true
+  },
+  "rules": {
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "components": ["Label"],
+        "required": {
+          "every": ["nesting", "id"]
+        },
+        "allowChildren": true
+      }
+    ],
+    "import/prefer-default-export": false,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "prettier/prettier": "error", // Import prettier rules in ESLint
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+    "react/default-props-match-prop-types": [0]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["src/modules", "node_modules"]
+      }
+    }
+  }
+}

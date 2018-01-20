@@ -24,7 +24,7 @@ const Dashboard = ({ portfolio }) => {
 };
 
 Dashboard.propTypes = {
-  portfolio: PropTypes.array,
+  portfolio: PropTypes.arrayOf(PropTypes.object),
 };
 
 Dashboard.defaultProps = {
