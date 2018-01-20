@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
 
 import { registerPortfolio } from 'portfolio';
 import createRootReducer from './reducers';
@@ -12,7 +13,7 @@ const configureStore = () => {
   registerPortfolio();
 
   const rootReducer = createRootReducer();
-  const middlewares = [];
+  const middlewares = [thunk];
 
   if (process.env.NODE_ENV === 'development') {
     middlewares.push(createLogger());

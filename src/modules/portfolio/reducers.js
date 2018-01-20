@@ -1,4 +1,5 @@
-import { GET_PORTFOLIO } from './actions';
+import { assoc } from 'ramda';
+import { PORTFOLIO_RECEIVED } from './actions';
 
 const initialState = {
   portfolio: null,
@@ -6,8 +7,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_PORTFOLIO: {
-      return state;
+    case PORTFOLIO_RECEIVED: {
+      console.log(action);
+      return assoc('portfolio', action.payload, state);
     }
     default:
       return state;

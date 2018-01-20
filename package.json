@@ -25,14 +25,18 @@
   },
   "homepage": "https://github.com/birdy-/greenpoint-web#readme",
   "dependencies": {
+    "classnames": "^2.2.5",
     "jest": "^22.1.4",
     "jest-enzyme": "^4.0.2",
+    "moment": "^2.20.1",
+    "ramda": "^0.25.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-register-module": "0.0.1"
+    "redux-register-module": "0.0.1",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
